@@ -4,6 +4,7 @@
 
 processor:
   ignoreGroupVersions:
+    # Omit entire packages for v1beta2 version so this page documents old api versions only.
     - ".*/v1beta2$"
   ignoreTypes:
     - "Time$"
