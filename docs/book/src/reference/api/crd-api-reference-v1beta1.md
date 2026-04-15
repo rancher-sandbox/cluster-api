@@ -1,4 +1,4 @@
-> This page documents **v1beta1** API packages. For current types, see [CRD API Reference (v1beta2)](crd-api-reference.md).
+> This page documents **deprecated** API packages. For current types, see [CRD API Reference (v1beta2)](crd-api-reference.md).
 
 # API Reference
 
