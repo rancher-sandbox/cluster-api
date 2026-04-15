@@ -4,8 +4,8 @@
 
 processor:
   ignoreGroupVersions:
-    # Omit entire v1beta1 packages so this page documents v1beta2 (and v1alpha*, etc.) only.
-    - ".*/v1beta1$"
+    # Omit entire packages for older API versions so this page documents v1beta2 only.
+    - ".*/(v1beta1|v1alpha1)$"
   ignoreTypes:
     - "Time$"
   ignoreFields:
