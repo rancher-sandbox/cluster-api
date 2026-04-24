@@ -129,7 +129,8 @@ var _ = Describe("When performing chained upgrades for workload cluster using Cl
 			// KUBERNETES_VERSION_UPGRADE_TO is not in the kind mapper, e.g. in the `e2e-latestk8s` prowjob.
 			// Note: KUBERNETES_VERSION_UPGRADE_TO has to be set either to one version in kind.GetKubernetesVersions() or
 			// to a version greater than the last in the list by at most one minor version.
-			KubernetesVersions: appendIfNecessary(kind.GetKubernetesVersions(), e2eConfig.MustGetVariable(KubernetesVersionUpgradeTo)),
+			// TODO: remove v1.36.0 as soon as a kind image for v1.36.0 is available
+			KubernetesVersions: appendIfNecessary(appendIfNecessary(kind.GetKubernetesVersions(), "v1.36.0"), e2eConfig.MustGetVariable(KubernetesVersionUpgradeTo)),
 			// The runtime extension gets deployed to the test-extension-system namespace and is exposed
 			// by the test-extension-webhook-service.
 			// The below values are used when creating the cluster-wide ExtensionConfig to refer

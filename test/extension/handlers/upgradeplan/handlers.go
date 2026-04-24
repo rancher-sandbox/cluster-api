@@ -58,6 +58,10 @@ func (m *ExtensionHandlers) DoGenerateUpgradePlan(ctx context.Context, request *
 
 	// Get the list of Kubernetes versions from the kind mapper.
 	versions := kind.GetKubernetesVersions()
+	// TODO: remove v1.36.0 as soon as a kind image for v1.36.0 is available
+	if !slices.Contains(versions, "v1.36.0") {
+		versions = append(versions, "v1.36.0")
+	}
 	if !slices.Contains(versions, request.ToKubernetesVersion) {
 		versions = append(versions, request.ToKubernetesVersion)
 	}
