@@ -403,7 +403,7 @@ using the [kubeadm API](https://kubernetes.io/docs/setup/production-environment/
 
 |                           | kubeadm API Version                                                                |
 |---------------------------|------------------------------------------------------------------------------------|
-| Kubernetes > v1.31        | [v1beta4](https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/) |
+| Kubernetes >= v1.31       | [v1beta4](https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta4/) |
 | Kubernetes v1.22 .. v1.30 | [v1beta3](https://kubernetes.io/docs/reference/config-api/kubeadm-config.v1beta3/) |
 
 ### Kubeadm Control Plane provider (`kubeadm-control-plane-controller`)
